@@ -201,7 +201,7 @@ section:not(:first-child) {
   margin-bottom: 20px;
   width: 350px;
   height: 350px;
-  background-image: url(/img/cvphoto.png);
+  background-image: url(../img/cvphoto.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -355,7 +355,7 @@ footer {
   display: inline-block;
   width: 160px;
   height: 70px;
-  background-image: url(/img/rs_school_js.svg);
+  background-image: url(../img/rs_school_js.svg);
   background-repeat: no-repeat;
   background-size: contain;
   filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(37deg) brightness(105%) contrast(108%);
