@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="faviconCV.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>cv</title>
+</head>
+
+<body class="body flex">
+  <header class="header">
+    <div class="header__container container flex">
+      <nav id="menu" class="header__nav nav">
+        <ul class="nav__list list-reset flex">
+          <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
+          <li class="nav__item"><a href="#summary" class="nav__link">Summary</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#code" class="nav__link">Code</a></li>
+          <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+          <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#language" class="nav__link">Language</a></li>
+        </ul>
+      </nav>
+      <button id="burger" class="btn-reset burger">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <div class="container flex">
+      <section class="hero">
+        <div class="hero__container flex">
+          <div class="hero__content">
+            <h1 class="hero__title">Anastasia Dergacheva</h1>
+          </div>
+          <div class="hero__img"></div>
+        </div>
+      </section>
+
+      <section id="contacts" class="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title title">Contacts</h2>
+          <ul class="contacts__list list-reset">
+            <li class="contacts__item">Phone: <a href="tel:+375445624533" class="contacts__link">+375 44 56 24 533</a>
+            </li>
+            <li class="contacts__item">E-mail: <a href="mailto:anastasia.derg.1@gmail.com" class="contacts__link">anastasia.derg.1@gmail.com</a></li>
+            <li class="contacts__item">Telegram: <a href="https://t.me/tyler_CZ" class="contacts__link">@tyler_CZ</a>
+            </li>
+            <li class="contacts__item">Discord: <a href="https://discord.com" class="contacts__link">NastyaHofst(@TylerHawkin)</a></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="summary" class="summary">
+        <div class="summary__container">
+          <h2 class="summary__title title">About myself</h2>
+          <p class="summary__text">
+            Biology was my major in university.While studying, I became interested in bioinformatics.
+            Statistical data processing is an integral part of this field, so I started learning Python, and
+            later got acquainted with other areas.
+            I realized that I am very interested in the design of websites and what makes them "live", this
+            fully describes the frontend.<br>
+            Thanks to open resources on the Internet, I can freely study and improve my skills. As a result,
+            I now have good basic knowledge in the of layout and the basics of JS.
+            My goal is to master web development so that I have the opportunity to work in pleasure.
+            Therefore, I believe that my perseverance and motivation for an interesting promising job will
+            help me acquire the necessary skills to achieve the goal!
+          </p>
+        </div>
+      </section>
+
+
+      <section id="skills" class="skills">
+        <div class="skills__container">
+          <h2 class="skills__title title">Key skills</h2>
+          <ul class="skills__list list-reset">
+            <li class="skills__item">Basic JavaScript</li>
+            <li class="skills__item">Jquery, Swiper</li>
+            <li class="skills__item">HTML, CSS</li>
+            <li class="skills__item">Git, GitHub, GitLab</li>
+            <li class="skills__item">VS Code, WebStorm</li>
+            <li class="skills__item">Figma, Adobe Photoshop</li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="code" class="code">
+        <div class="code__container">
+          <h2 class="code__title title">Code example:</h2>
+          <pre class="pre">
+                        <code class="code">
+  let entrances = 4; //количество подъездов
+  let floors = 9; // количество этажей
+  let flatsPerFloor = 4; // количество квартир на этаже
+
+  let flatPerEntrance =  floors * flatsPerFloor;
+  console.log ('квартир в подъезде', flatPerEntrance);
+
+  let flats =  entrances * flatPerEntrance;
+  console.log('квартир в доме', flats);
+                        </code>
+                    </pre>
+        </div>
+      </section>
+
+
+      <section id="education" class="education">
+        <div class="education__container">
+          <h2 class="education__title title">Education</h2>
+          <ul class="education__list list-reset">
+            <li class="education__item">BELARUSIAN STATE UNIVERSITY (BSU)<br>
+              Faculty of Biology / Department of Biochemistry<br>
+              Specialty: biochemistry, biochemistry of medicinal funds<br>
+              *Bachelor’s degree (2016-2021)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="courses" class="courses">
+        <div class="courses__container">
+          <h2 class="courses__title title">Courses</h2>
+          <ul class="courses__list list-reset">
+            <li class="courses__item">
+              Skillbox (Full-stack Python developer)
+            </li>
+            <li class="courses__item">
+              RS School (JavaScript/Front-end)
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="projects" class="projects">
+        <div class="projects__container">
+          <h2 class="projects__title title">Projects</h2>
+          <ul class="projects__list list-reset">
+            <li class="projects__item"><a href="https://github.com/TylerHawkin/rsschool-cv/blob/gh-pages/cv.md" class="projects__link">Project CV.Markdown & Git</a></li>
+          </ul>
+        </div>
+      </section>
+
+
+      <section id="language" class="language">
+        <div class="language__container">
+          <h2 class="language__title title">language</h2>
+          <ul class="language__list list-reset">
+            <li class="language__item">English (B1 - Intermediate)</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer__container container flex">
+      <div class="footer__content">
+        © 2022 <a href="https://github.com/TylerHawkin" class="footer__link">TylerHawkin</a>
+      </div>
+      <a href="https://rs.school/js/" class="footer__logo"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
