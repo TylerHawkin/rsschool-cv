@@ -8,22 +8,173 @@
     <link rel="icon" href="faviconCV.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>cv</title>
 </head>
 
-<body>
-    <h1>Anastasia Dergacheva</h1>
+<body class="body flex">
+    <header class="header">
+        <div class="header__container container">
+            <nav class="header__nav nav">
+                <ul class="nav-list list-reset flex">
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                    <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#language" class="nav-link">Language</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Contact information:</h2>
-    <ul>
-        <li>Phone: +375-44-5624533</li>
-        <li>E-mail: anastasia.derg.1@gmail.com</li>
-        <li>Telegram: @tyler_CZ</li>
-        <li>Discord: NastyaHofst (@TylerHawkin)</li>
-    </ul>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1>Anastasia Dergacheva</h1>
+                </div>
+                <div class="hero__img">
+                    <img src="img/cvphoto.png">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="contacts__container container">
+                <h2 class="contacts__title">Contacts</h2>
+                <ul class="contacts__list list-reset">
+                    <li class="contacts__item">Phone: <a href="tel:+375445624533" class="contacts__link">+375 44 56 24
+                            533</a></li>
+                    <li class="contacts__item">E-mail: <a href="mailto:anastasia.derg.1@gmail.com"
+                            class="contacts__link">anastasia.derg.1@gmail.com</a></li>
+                    <li class="contacts__item">Telegram: <a href="https://t.me/tyler_CZ"
+                            class="contacts__link">@tyler_CZ</a></li>
+                    <li class="contacts__item">Discord: <a href="https://discord.com" class="contacts__link">NastyaHofst
+                            (@TylerHawkin)</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="summary" class="summary">
+            <div class="summary__container container">
+                <h2 class="summary__title">About myself</h2>
+                <p class="summary__text">
+                    Biology was my major in university.While studying, I became interested in bioinformatics.
+                    Statistical data processing is an integral part of this field, so I started learning Python, and
+                    later got acquainted with other areas.
+                    I realized that I am very interested in the design of websites and what makes them "live", this
+                    fully describes the frontend.
+                    Thanks to open resources on the Internet, I can freely study and improve my skills. As a result, I
+                    now have good basic knowledge in the of layout and the basics of JS.
+                    My goal is to master web development so that I have the opportunity to work in pleasure.
+                    Therefore, I believe that my perseverance and motivation for an interesting promising job will help
+                    me acquire the necessary skills to achieve the goal!
+                </p>
+            </div>
+        </section>
+
+
+        <section id="skills" class="skills">
+            <div class="skills__container container">
+                <h2 class="skills__title">Key skills</h2>
+                <ul class="skills__list list-reset">
+                    <li class="skills__item">Basic JavaScript</li>
+                    <li class="skills__item">Jquery, Swiper</li>
+                    <li class="skills__item">HTML, CSS</li>
+                    <li class="skills__item">Git, GitHub, GitLab</li>
+                    <li class="skills__item">VS Code, WebStorm</li>
+                    <li class="skills__item">Figma, Adobe Photoshop</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="code" class="code">
+            <div class="code__container container">
+                <h2 class="code__title">Code example:</h2>
+                <pre class="pre">
+                    <code class="code">
+                        let numArr = [];
+                        let week = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
+
+                        let day = 'вторник';
+                        let indexWeek = week.indexOf(day);
+
+                        for (let i = 1; i <= 31; ++i) {
+                            numArr.push(i);
+                        }
+
+                        for (let el of numArr) {
+                            a = (indexWeek + el - 1) % 7; 
+                            console.log(`${el} января, ${week[a]}`);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </section>
+
+
+        <section id="projects" class="projects">
+            <div class="projects__container container">
+                <h2 class="projects__title">Projects</h2>
+                <ul class="projects__list list-reset">
+                    <li class="projects__item"><a href="https://github.com/TylerHawkin/rsschool-cv/blob/gh-pages/cv.md"
+                            class="projects__link">Project CV.Markdown & Git</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="education" class="education">
+            <div class="education__container container">
+                <h2 class="education__title">Education</h2>
+                <ul class="education__list list-reset">
+                    <li class="education__item">BELARUSIAN STATE UNIVERSITY (BSU)
+                        Faculty of Biology / Department of Biochemistry
+                        Specialty: biochemistry, biochemistry of medicinal funds
+                        *Bachelor’s degree (2016-2021)
+                    </li>
+                    <li class="education__item">
+                        Skillbox (Full-stack Python developer)
+                    </li>
+                    <li class="education__item">
+                        RS School (JavaScript/Front-end)
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="language" class="language">
+            <div class="language__container container">
+                <h2>language</h2>
+                <ul class="language__list list-reset">
+                    <li class="language__item">English (B1 - Intermediate)</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                © 2022 <a href="https://github.com/TylerHawkin">TylerHawkin</a>
+            </div>
+            <div class="footer__logo">
+                <a href="https://rs.school/js/" class="footer__img"></a>
+            </div>
+        </div>
+
+    </footer>
+
 </body>
 
 </html>
