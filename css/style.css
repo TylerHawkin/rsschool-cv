@@ -228,18 +228,21 @@ section:not(:first-child) {
   font-weight: 400;
 }
 
-.contacts__link {
+.contacts__link,
+.projects__link {
   transition-property: border, color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
-.contacts__link:focus {
+.contacts__link:focus,
+.projects__link:focus {
   border: 2px solid #6a0000;
   outline: none;
 }
 
-.contacts__link:hover {
+.contacts__link:hover,
+.projects__link:hover {
   color: #d15203;
   text-shadow:
   0 0 4px #fff,
@@ -252,7 +255,8 @@ section:not(:first-child) {
   0 0 150px #d15203;
 }
 
-.contacts__link:active {
+.contacts__link:active,
+.projects__link:active {
   border: none;
   color: #6a0000;
 }
