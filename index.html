@@ -17,7 +17,7 @@
 <body class="body flex">
   <header class="header">
     <div class="header__container container flex">
-      <nav class="header__nav nav">
+      <nav id="menu" class="header__nav nav">
         <ul class="nav__list list-reset flex">
           <li class="nav__item"><a href="#contacts" class="nav__link">Contacts</a></li>
           <li class="nav__item"><a href="#summary" class="nav__link">Summary</a></li>
@@ -29,6 +29,9 @@
           <li class="nav__item"><a href="#language" class="nav__link">Language</a></li>
         </ul>
       </nav>
+      <button id="burger" class="btn-reset burger">
+        <span class="burger__line"></span>
+      </button>
     </div>
   </header>
 
@@ -50,12 +53,10 @@
           <ul class="contacts__list list-reset">
             <li class="contacts__item">Phone: <a href="tel:+375445624533" class="contacts__link">+375 44 56 24 533</a>
             </li>
-            <li class="contacts__item">E-mail: <a href="mailto:anastasia.derg.1@gmail.com"
-                class="contacts__link">anastasia.derg.1@gmail.com</a></li>
+            <li class="contacts__item">E-mail: <a href="mailto:anastasia.derg.1@gmail.com" class="contacts__link">anastasia.derg.1@gmail.com</a></li>
             <li class="contacts__item">Telegram: <a href="https://t.me/tyler_CZ" class="contacts__link">@tyler_CZ</a>
             </li>
-            <li class="contacts__item">Discord: <a href="https://discord.com"
-                class="contacts__link">NastyaHofst(@TylerHawkin)</a></li>
+            <li class="contacts__item">Discord: <a href="https://discord.com" class="contacts__link">NastyaHofst(@TylerHawkin)</a></li>
           </ul>
         </div>
       </section>
@@ -100,20 +101,15 @@
           <h2 class="code__title title">Code example:</h2>
           <pre class="pre">
                         <code class="code">
-  let numArr = [];
-  let week = ['понедельник', 'вторник', 'среда'];
+  let entrances = 4; //количество подъездов
+  let floors = 9; // количество этажей
+  let flatsPerFloor = 4; // количество квартир на этаже
 
-  let day = 'вторник';
-  let indexWeek = week.indexOf(day);
+  let flatPerEntrance =  floors * flatsPerFloor;
+  console.log ('кол-во квартир в подъезде', flatPerEntrance);
 
-  for (let i = 1; i <= 31; ++i) {
-      numArr.push(i);
-  }
-
-  for (let el of numArr) {
-      a = (indexWeek + el - 1) % 7;
-      console.log(`${el} января, ${week[a]}`);
-  }
+  let flats =  entrances * flatPerEntrance;
+  console.log('кол-во квартир в доме', flats);
                         </code>
                     </pre>
         </div>
@@ -152,8 +148,7 @@
         <div class="projects__container">
           <h2 class="projects__title title">Projects</h2>
           <ul class="projects__list list-reset">
-            <li class="projects__item"><a href="https://github.com/TylerHawkin/rsschool-cv/blob/gh-pages/cv.md"
-                class="projects__link">Project CV.Markdown & Git</a></li>
+            <li class="projects__item"><a href="https://github.com/TylerHawkin/rsschool-cv/blob/gh-pages/cv.md" class="projects__link">Project CV.Markdown & Git</a></li>
           </ul>
         </div>
       </section>
@@ -180,6 +175,7 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
