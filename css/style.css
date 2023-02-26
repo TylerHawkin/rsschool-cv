@@ -30,8 +30,9 @@ a {
   display: none;
   position: relative;
   z-index: 10000;
-  width: 45px;
-  height: 35px;
+  left: 0;
+  width: 60px;
+  height: 40px;
   border: none;
   cursor: pointer;
 }
@@ -86,12 +87,9 @@ a {
 
 body {
   margin: 0 auto;
-  padding: 0;
-  max-width: 1440px;
-  min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  flex-direction: column;
-  justify-content: space-between;
+  max-width: 1920px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 main {
@@ -99,8 +97,10 @@ main {
 }
 
 .container {
+  margin: 0 auto;
   padding: 0 30px;
   max-width: 1440px;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -131,51 +131,48 @@ section:not(:first-child) {
 
 /*header*/
 .header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background-color: rgb(203, 83, 39);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .header__container {
-  height: 100px;
-}
-
-.header__container {
-  justify-content: flex-end;
+  height: 120px;
+  justify-content: space-around;
   align-items: center;
 }
 
 .nav__list {
-  justify-content: flex-end;
   align-items: center;
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .nav__link {
+  padding: 4px;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 28px;
   line-height: 20px;
-  color: #FFF;
-  transition-property: color, border;
-  transition-duration: 0.2s;
+  color: #FFFFFF;
+  transition-property: color;
+  transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
 .nav__link:focus {
-  border: 2px solid #FFF;
+  border: 2px solid #FFFFFF;
   outline: none;
 }
 
 .nav__link:hover {
-  border-bottom: 2px solid #FFF;
+  color: #723a08;
 }
 
 .nav__link:active {
   color: #6a0000;
-  border: none
+  border: none;
 }
 
 /*hero*/
@@ -230,6 +227,7 @@ section:not(:first-child) {
 
 .contacts__link,
 .projects__link {
+  padding: 4px;
   transition-property: border, color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -243,16 +241,7 @@ section:not(:first-child) {
 
 .contacts__link:hover,
 .projects__link:hover {
-  color: #d15203;
-  text-shadow:
-  0 0 4px #fff,
-  0 0 11px #fff,
-  0 0 19px #fff,
-  0 0 40px #d15203,
-  0 0 80px #d15203,
-  0 0 90px #d15203,
-  0 0 100px #d15203,
-  0 0 150px #d15203;
+  color: #ff6d05;
 }
 
 .contacts__link:active,
@@ -281,7 +270,7 @@ section:not(:first-child) {
   padding-left: 10px;
   font-weight: 400;
   font-size: 25px;
-  line-height: 25px;
+  line-height: 30px;
   color: #a14520;
 }
 
@@ -309,6 +298,9 @@ section:not(:first-child) {
 }
 
 /*projects*/
+.projects__item:not(:last-child) {
+  margin-bottom: 20px;
+}
 
 /*language*/
 
@@ -328,27 +320,29 @@ footer {
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
-  color: #FFF;
+  /* color: #FFF; */
 }
 
 .footer__link {
-  transition-property: border, color;
+  padding: 3px;
+  border-bottom: 2px solid transparent;
+  transition-property: border-color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
 .footer__link:focus {
-  border: 2px solid #FFF;
+  border: 2px solid #000000;
   outline: none;
 }
 
 .footer__link:hover {
-  border-bottom: 2px solid #FFF;
+  border-color:  #000000;
 }
 
 .footer__link:active {
-  color: #6a0000;
-  border: none
+  color: #ffffff;
+  border: none;
 }
 
 .footer__logo {
@@ -358,25 +352,27 @@ footer {
   background-image: url(../img/rs_school_js.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(37deg) brightness(105%) contrast(108%);
 }
 
 .footer__logo:focus {
-  border: 2px solid rgb(0, 0, 0);
+  border: 1px solid #000000;
   outline: none;
 }
 
-.footer__logo:hover {
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
 .footer__logo:active {
-  box-shadow: 0 0 15px rgb(255, 255, 255);
   border: none;
 }
 
 /*@media*/
-@media (max-width: 768px) {
+@media (max-width: 950px) {
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .container {
+    max-width: 85%;
+  }
+
   .burger {
     display: block;
   }
@@ -389,6 +385,7 @@ footer {
     position: fixed;
     padding: 50px 0;
     width: 100%;
+    height: 100vh;
     z-index: 1000;
     top: 0;
     left: 0;
@@ -410,6 +407,11 @@ footer {
 
   .nav__visible {
     transform: none;
+  }
+
+  .hero__img {
+    width: 250px;
+    height: 250px;
   }
 
   .footer__content {
